@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font: 14px/1.4 system-ui, sans-serif; background: #05070d; color: #dfe6f3; }
+#app { display: grid; grid-template-columns: 1fr 340px; height: 100%; }
+#view { position: relative; min-width: 0; }
+#c { width: 100%; height: 100%; display: block; }
+#hud { position: absolute; top: 10px; left: 10px; display: flex; gap: 14px; align-items: center;
+  background: #0b1220cc; padding: 6px 10px; border-radius: 6px; font-size: 12px; }
+#hud { flex-wrap: wrap; max-width: calc(100% - 20px); }
+#badge { letter-spacing: .5px; }
+#hud button { background: #1a2745; color: inherit; border: 1px solid #2a3858; border-radius: 4px; padding: 2px 8px; cursor: pointer; }
+#hud select { background: #111a2e; color: inherit; border: 1px solid #2a3858; border-radius: 4px; }
+#legend { position: absolute; bottom: 10px; left: 10px; background: #0b1220cc; padding: 8px 10px;
+  border-radius: 6px; font-size: 12px; }
+#legend div { display: flex; align-items: center; gap: 6px; }
+#legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+aside { background: #0b1220; border-left: 1px solid #1c2740; padding: 12px; overflow-y: auto; }
+h1 { font-size: 16px; margin: 0 0 8px; }
+#map { width: 100%; height: auto; display: block; border-radius: 6px; margin-bottom: 8px; }
+#mc { width: 100%; height: 170px; display: none; margin: 8px 0; border-radius: 6px;
+  background: radial-gradient(#1a2745, #05070d); }
+#q { width: 100%; padding: 6px 8px; background: #111a2e; color: inherit;
+  border: 1px solid #2a3858; border-radius: 4px; }
+#list { list-style: none; margin: 8px 0; padding: 0; max-height: 28vh; overflow-y: auto;
+  border: 1px solid #1c2740; border-radius: 4px; }
+#list li { padding: 4px 8px; cursor: pointer; display: flex; justify-content: space-between; gap: 8px; }
+#list li:hover, #list li.sel { background: #1a2745; }
+#list small { color: #8a9ac0; white-space: nowrap; }
+#info h2 { font-size: 15px; margin: 6px 0; }
+#info table { width: 100%; border-collapse: collapse; }
+#info td { padding: 3px 0; vertical-align: top; border-bottom: 1px solid #16203a; }
+#info td:first-child { color: #8a9ac0; width: 42%; }
+.bar { height: 8px; background: #16203a; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+.bar b { display: block; height: 100%; background: #4da3ff; }
+@media (max-width: 800px) {
+  #app { grid-template-columns: 1fr; grid-template-rows: 55% 45%; }
+  aside { border-left: 0; border-top: 1px solid #1c2740; }
+}
